@@ -1806,32 +1806,34 @@ input::-moz-focus-inner {
 
  
 .header-logo {
-  z-index: 102;
+  z-index: 100px;
   display: inline-block;
-  margin: 0;
-  padding: 0;
+  margin: 100px 0 0 100px;
+  padding: 200px 100px 0px 0px;
   transition: all .3s;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);
   /*position: absolute;*/
   left: 0;
-  top: 0;
+  top: 100px;
 }
-
+/*
 .header-logo::before {
   content: "";
+
+  
   display: block;
   background-color: rgba(255, 255, 255, 0.5);
   height: 1px;
   width: 9rem;
-  position: absolute;
+  position: 0px;
   top: 50%;
   left: -11rem;
 }
-
+*/
 .header-logo a {
   display: block;
-  padding: auto;
+  padding: 100px;
   outline: 0;
   border: none;
 }
@@ -2131,9 +2133,9 @@ input::-moz-focus-inner {
 .hero-content h1::before {
   display: block;
   content: "";
-  height: 2px;
-  width: 10rem;
-  background-color: #7d1c24;
+  height: 6px;
+  width: 15rem;
+  background-color: #ff004c;
   position: absolute;
   top: 0;
   left: .8rem;
