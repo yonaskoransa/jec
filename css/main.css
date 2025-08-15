@@ -1,7 +1,7 @@
 /* =================================================================== 
- *  Hesed Main Stylesheet
+ *  JEC Main Stylesheet
  *  Template Ver. 1.0.0
- *  06-26-2019
+ *  06-26-2025
  *  ------------------------------------------------------------------
  *
  *  TOC:
@@ -1802,6 +1802,9 @@ input::-moz-focus-inner {
 /* -------------------------------------------------------------------
  * ## header logo
  * ------------------------------------------------------------------- */
+ 
+
+ 
 .header-logo {
   z-index: 102;
   display: inline-block;
@@ -1810,9 +1813,9 @@ input::-moz-focus-inner {
   transition: all .3s;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);
-  position: absolute;
-  left: 11rem;
-  top: 50%;
+  /*position: absolute;*/
+  left: 0;
+  top: 0;
 }
 
 .header-logo::before {
@@ -1828,14 +1831,14 @@ input::-moz-focus-inner {
 
 .header-logo a {
   display: block;
-  padding: 0;
+  padding: auto;
   outline: 0;
   border: none;
 }
 
 .header-logo img {
-  width: 108px;
-  height: 28px;
+  width: 350px;
+  height: 350px;
 }
 
 /* -------------------------------------------------------------------
@@ -3179,7 +3182,7 @@ html.no-csstransitions .hero-content {
 
 .footer-logo img {
   width: 138px;
-  height: 36px;
+  height: 138px;
 }
 
 /* -------------------------------------------------------------------
