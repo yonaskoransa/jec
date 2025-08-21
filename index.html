@@ -2,6 +2,15 @@
 <html class="no-js" lang="en">
 <head>
 
+<!-- 🌐 Language Switcher with Flag Emojis -->
+<div class="language-switcher" style="text-align: center; margin: 30px 0;">
+  <button onclick="loadLanguage('en')" style="font-size: 2.5rem; background: none; border: none; cursor: pointer;">🇬🇧</button>
+  <button onclick="loadLanguage('am')" style="font-size: 2.5rem; background: none; border: none; cursor: pointer;">🇪🇹</button>
+  <button onclick="loadLanguage('sv')" style="font-size: 2.5rem; background: none; border: none; cursor: pointer;">🇸🇪</button>
+</div>
+
+<!-- 📝 Translatable Content -->
+
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
@@ -33,6 +42,21 @@
 
 <body id="top">
 
+    <script>
+    (function(){
+        var vp = document.querySelector('meta[name="viewport"]');
+        var content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+        if (vp) vp.setAttribute('content', content);
+        else {
+            vp = document.createElement('meta');
+            vp.name = 'viewport';
+            vp.content = content;
+            document.head.appendChild(vp);
+        }
+    })();
+    </script>
+
+   
     <!-- preloader
     ================================================== -->
     <div id="preloader">
@@ -64,7 +88,7 @@
         </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
-
+        
     </header> <!-- end s-header -->
 
 
@@ -77,10 +101,13 @@
         <div class="row hero-content">
 
             <div class="column large-full hero-content__text">
-                <h1>
-                    We Exist To <br>
-                    Worship God And <br>
-                    Make Disciples
+                
+    
+                <h1 id="about" class="hero-amharic-title">
+                    በምድር መኖራችን <br>
+                    እግዚአብሔርን ለማምለክና <br>
+                    ደቀ-መዛሙርትን <br>
+                    ለማፍራት ነው! <br>
                 </h1>
 
                 <div class="hero-content__buttons">
@@ -137,7 +164,7 @@
                         <h4>Main Church Service</h4>
                         <p>
                         Sunday - 9:00 AM | 1:00 PM | 4:30 PM <br>
-                        Flygfältsgatan 8 , 128 30 Skarpnäck
+                        Flygfältsgatan 8 , 128 30 Skarpnäck</a>
                         </p>
                     </li>
                     <li>
@@ -433,5 +460,8 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- 📦 Load Language Script -->
+<script src="js/lang.js"></script>
 
 </body>

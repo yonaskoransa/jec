@@ -86,8 +86,90 @@
   }
 
 }
+/*
+ * -------------------------------------------------------------------
+ * ## Language Selector
+ * -------------------------------------------------------------------
+ */
 
+.lang-selector {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  z-index: 1000;
+  font-family: "Montserrat", sans-serif;
+}
 
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #fff;
+}
+
+.lang-btn:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.lang-btn .lang-caret {
+  font-size: 0.85rem;
+  opacity: 1;
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 150px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.35rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.lang-menu.show {
+  display: block;
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+}
+
+.lang-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.lang-item .emoji {
+  font-size: 1.05rem;
+}
+/*
+ * -------------------------------------------------------------------
+ * ## Specific Font Changes
+ * -------------------------------------------------------------------
+ */
+
+.hero-amharic-title {
+  font-family: "Agbalumo", sans-serif;
+  font-size: 5.5rem; /* Optional: You can adjust the font size here */
+}
 /* ===================================================================
  * # base style overrides
  *
@@ -3585,4 +3667,26 @@ html.no-csstransitions .hero-content {
 
 }
 
+
+
+/* 🌐 Language Switcher Container */
+.language-switcher {
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* 🏳️Flag Buttons */
+.language-switcher button {
+  font-size: 2.5rem;         /* Large flag size */
+  background: none;          /* No background */
+  border: none;              /* No border */
+  cursor: pointer;           /* Pointer on hover */
+  margin: 0 15px;            /* Space between flags */
+  transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* ✨ Hover Effect for Flags */
+.language-switcher button:hover {
+  transform: scale(1.2);     /* Slight zoom on hover */
+}
 /*# sourceMappingURL=main.css.map */

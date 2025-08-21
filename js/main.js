@@ -2,7 +2,55 @@
  * JEC 1.0.0 - Main JS
  *
  * ------------------------------------------------------------------- */
+(function() {
+    // language switcher (from translation.js)
+    // Expects a global TRANSLATIONS object like:
+    // { en: { "hello": "Hello" }, es: { "hello": "Hola" } }
+    const storageKey = 'site_lang';
+    const TRANSLATIONS = window.TRANSLATIONS || {};
+    const defaultLang = localStorage.getItem(storageKey) ||
+                                            ((navigator.language || 'en').split('-')[0]) ||
+                                            'en';
 
+    function translate(lang) {
+        const dict = TRANSLATIONS[lang] || {};
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const value = dict[key] ?? (TRANSLATIONS['en'] && TRANSLATIONS['en'][key]) ?? '';
+            if (el.hasAttribute('data-i18n-placeholder')) {
+                el.placeholder = value;
+            } else if (el.hasAttribute('data-i18n-html')) {
+                el.innerHTML = value;
+            } else {
+                el.textContent = value;
+            }
+        });
+
+        document.documentElement.lang = lang;
+        localStorage.setItem(storageKey, lang);
+
+        // update active state for language buttons/links
+        document.querySelectorAll('[data-lang]').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        translate(defaultLang);
+
+        // delegate clicks on elements with data-lang
+        document.body.addEventListener('click', function(e) {
+            const btn = e.target.closest('[data-lang]');
+            if (!btn) return;
+            e.preventDefault();
+            const lang = btn.getAttribute('data-lang');
+            if (lang) translate(lang);
+        });
+    });
+
+    // optional programmatic API
+    window.setLanguage = translate;
+})();
 (function($) {
 
     "use strict";
