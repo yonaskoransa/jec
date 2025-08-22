@@ -4,8 +4,11 @@ async function loadLanguage(lang) {
     const response = await fetch(`lang-${lang}.json`);
     const data = await response.json();
 
-    document.getElementById('welcome').textContent = data.welcome;
-   document.getElementById('about-moto').innerHTML = data['about-moto'];
+    // Update welcome section
+    document.getElementById('welcome').innerHTML = data.welcome;
+
+    // ✅ Update about-moto section
+    document.getElementById('about-moto').innerHTML = data['about-moto'];
   } catch (error) {
     console.error("Could not load language file:", error);
   }
