@@ -67,6 +67,17 @@
  * # custom block grid STACK breakpoints
  *
  * ------------------------------------------------------------------- */
+
+body {
+  font-family: 'Noto Sans Ethiopic', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.header-nav a,
+.language-switcher a {
+  font-family: 'Noto Sans Ethiopic', sans-serif;
+}
+
 @media screen and (max-width:1000px) {
   .block-1000-full > .column {
     -webkit-flex: 0 0 100%;
@@ -3756,4 +3767,20 @@ html.no-csstransitions .hero-content {
   color: #fb8b23;
 } 
 
-
+.hero-moto {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.05rem;
+}
+@media screen and (max-width: 600px) {
+  .hero-moto {
+    font-size: 3.6rem;
+    margin-bottom: 3rem;
+  }
+}
