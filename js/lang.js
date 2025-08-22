@@ -5,7 +5,7 @@ async function loadLanguage(lang) {
     const data = await response.json();
 
     document.getElementById('welcome').textContent = data.welcome;
-    document.getElementById('about').innerHTML = data.about;
+   document.getElementById('about-moto').innerHTML = data['about-moto'];
   } catch (error) {
     console.error("Could not load language file:", error);
   }
