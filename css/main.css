@@ -3689,4 +3689,36 @@ html.no-csstransitions .hero-content {
 .language-switcher button:hover {
   transform: scale(1.2);     /* Slight zoom on hover */
 }
+/* 🌐 Footer Language Links */
+.language-footer {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.language-footer h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.language-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.language-list li {
+  margin-bottom: 5px;
+}
+
+.language-list a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.language-list a:hover {
+  color: #0077cc;
+}
 /*# sourceMappingURL=main.css.map */
