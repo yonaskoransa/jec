@@ -5,7 +5,7 @@ async function loadLanguage(lang) {
     const data = await response.json();
 
     // Update welcome section
-    document.getElementById('welcome').innerHTML = data.welcome;
+    //document.getElementById('welcome').innerHTML = data.welcome;
 
     // ✅ Update about-moto section
     document.getElementById('about-moto').innerHTML = data['about-moto'];
