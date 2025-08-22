@@ -3,6 +3,17 @@ async function loadLanguage(lang) {
   try {
     const response = await fetch(`lang-${lang}.json`);
     const data = await response.json();
+    const ids = ['welcome', 'about-moto', 'nav-home', 'nav-about', 'nav-events', 'nav-contact'];
+    ids.forEach(id => {
+      if (document.getElementById(id)) {
+        document.getElementById(id).innerHTML = data[id];
+      }
+    });
+  } catch (error) {
+    console.error("Language loading failed:", error);
+  }
+}
+
 
     // Safely update each element only if it exists
     if (document.getElementById('welcome')) {

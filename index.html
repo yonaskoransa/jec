@@ -71,29 +71,30 @@
     <!-- header
     ================================================== -->
     <header class="s-header">
+  <div class="header-logo">
+    <a class="site-logo" href="index.html">
+      <img src="images/jeclogo.png" alt="Homepage">
+    </a>
+  </div>
 
-        <div class="header-logo">
-            <a class="site-logo" href="index.html">
-                <img src="images/jeclogo.png" alt="Homepage">
-            </a>
-        </div>
+  <nav class="header-nav-wrap">
+    <ul class="header-nav">
+      <li><a id="nav-home" href="index.html">Home</a></li>
+      <li><a id="nav-about" href="about.html">About</a></li>
+      <li><a id="nav-events" href="events.html">Events</a></li>
+      <li><a id="nav-contact" href="contact.html">Contact</a></li>
+    </ul>
 
-        <nav class="header-nav-wrap">
-            <ul class="header-nav">
-                <li class="current"><a id="nav-home" href="index.html">Home</a></li>
-                <li><a id="nav-about" href="about.html">About</a></li>
-                <li><a id="nav-events" href="events.html">Events</a></li>
-                <li><a id="nav-contact" href="contact.html">Contact</a></li>
-    <!-- 🌐 Language Links -->
-                <li class="language-link"><a href="#" onclick="loadLanguage('am')">Amharic</a></li>
-                <li class="language-link"><a href="#" onclick="loadLanguage('en')">English</a></li>
-                <li class="language-link"><a href="#" onclick="loadLanguage('sv')">Svenska</a></li>	
-            </ul>
-        </nav>
+    <!-- 🌐 Language Switcher -->
+    <div class="language-switcher">
+      <a href="#" onclick="loadLanguage('am')">Amharic</a> |
+      <a href="#" onclick="loadLanguage('en')">English</a> |
+      <a href="#" onclick="loadLanguage('sv')">Svenska</a>
+    </div>
+  </nav>
 
-        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
-        
-    </header> <!-- end s-header -->
+  <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+</header> <!-- end s-header -->
 
 
     <!-- hero
@@ -468,7 +469,7 @@
     <!-- 📦 Load Language Script -->
 <script src="js/lang.js"></script>
 <script>
-  loadLanguage('en'); // or your preferred default
+  loadLanguage('en'); // or 'am' or 'sv' as your default
 </script>
 
 

@@ -3722,3 +3722,31 @@ html.no-csstransitions .hero-content {
   color: #0077cc;
 }
 /*# sourceMappingURL=main.css.map */
+
+/* Navigation Menu */
+.header-nav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Language Switcher */
+.language-switcher {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.language-switcher a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 8px;
+  transition: color 0.2s ease;
+}
+
+.language-switcher a:hover {
+  color: #0077cc;
+}
