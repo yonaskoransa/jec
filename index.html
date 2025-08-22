@@ -80,10 +80,10 @@
 
         <nav class="header-nav-wrap">
             <ul class="header-nav">
-                <li class="current"><a href="index.html" title="Home">Home</a></li>
-                <li><a href="about.html" title="About">About</a></li>
-                <li><a href="events.html" title="Services">Events</a></li>
-                <li><a href="contact.html" title="Contact us">Contact</a></li>
+                <li class="current"><a id="nav-home" href="index.html">Home</a></li>
+                <li><a id="nav-about" href="about.html">About</a></li>
+                <li><a id="nav-events" href="events.html">Events</a></li>
+                <li><a id="nav-contact" href="contact.html">Contact</a></li>
     <!-- 🌐 Language Links -->
                 <li class="language-link"><a href="#" onclick="loadLanguage('am')">Amharic</a></li>
                 <li class="language-link"><a href="#" onclick="loadLanguage('en')">English</a></li>
@@ -467,5 +467,8 @@
 
     <!-- 📦 Load Language Script -->
 <script src="js/lang.js"></script>
+<script>
+      loadLanguage('en'); // or 'am' or 'sv' depending on your default
+</script>
 
 </body>
