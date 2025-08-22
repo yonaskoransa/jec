@@ -74,7 +74,9 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .header-nav a,
-.language-switcher a {
+.language-switcher a,
+.hero-moto,
+p, li {
   font-family: 'Noto Sans Ethiopic', sans-serif;
 }
 
