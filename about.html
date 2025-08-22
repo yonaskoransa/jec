@@ -55,13 +55,24 @@
         </div>
 
         <nav class="header-nav-wrap">
-            <ul class="header-nav">
+            <!--<ul class="header-nav">
                 <li><a href="index.html" title="Home">Home</a></li>
                 <li class="current"><a href="about.html" title="About">About</a></li>
                 <li><a href="events.html" title="Services">Events</a></li>
                 <li><a href="contact.html" title="Contact us">Contact</a></li>	
+            </ul>-->
+            <ul class="nav-menu">
+                <li><a id="nav-home" href="index.html">Home</a></li>
+                <li><a id="nav-about" href="about.html">About</a></li>
+                <li><a id="nav-events" href="events.html">Events</a></li>
+                <li><a id="nav-contact" href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="language-switcher">
+                <a href="#" onclick="loadLanguage('am')">Amharic</a> |
+                <a href="#" onclick="loadLanguage('en')">English</a> |
+                <a href="#" onclick="loadLanguage('sv')">Svenska</a>
+        </div>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
@@ -498,5 +509,5 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
+<script src="js/lang.js"></script>
 </body>

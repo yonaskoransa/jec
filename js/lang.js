@@ -12,4 +12,8 @@ async function loadLanguage(lang) {
   } catch (error) {
     console.error("Could not load language file:", error);
   }
+document.getElementById('nav-home').textContent = data['nav-home'];
+document.getElementById('nav-about').textContent = data['nav-about'];
+document.getElementById('nav-events').textContent = data['nav-events'];
+document.getElementById('nav-contact').textContent = data['nav-contact'];
 }
