@@ -1879,6 +1879,7 @@ input::-moz-focus-inner {
   position: absolute;
   top: 2.8rem;
   left: 0;
+  
 }
 
 /* -------------------------------------------------------------------
@@ -3672,7 +3673,11 @@ html.no-csstransitions .hero-content {
 /* 🌐 Language Switcher Container */
 .language-switcher {
   text-align: center;
-  margin: 5px 0;
+  margin-top: 10px;
+  font-size: .9rem;
+  letter-spacing: .35rem;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* 🏳️Flag Buttons */
@@ -3741,14 +3746,14 @@ html.no-csstransitions .hero-content {
 }
 
 .language-switcher a {
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  color: #333;
   margin: 0 8px;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
 .language-switcher a:hover {
-  color: #0077cc;
-}
+  color: #fb8b23;
+} 
 
 
